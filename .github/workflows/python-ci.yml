@@ -24,4 +24,11 @@ jobs:
 
     - name: Run tests and generate report
       run: |
+        mkdir -p test-results
         pytest tests --junitxml=test-results/result.xml
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      with:
+        name: python-test-results
+        path: test-results/result.xml
