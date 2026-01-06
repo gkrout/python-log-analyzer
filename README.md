@@ -9,3 +9,5 @@ Simple Python project to analyze log files and count log levels.
 ### Run locally
 ```bash
 python app/analyzer.py
+
+# End
